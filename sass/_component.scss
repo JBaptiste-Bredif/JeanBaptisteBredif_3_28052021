@@ -8,4 +8,13 @@
     $color-secondary,
     $color-primary
   );
+
+  &:hover {
+    transform: scale(0.95);
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.3);
+  }
+  &:active {
+    transform: scale(0.9);
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.3);
+  }
 }

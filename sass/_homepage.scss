@@ -54,7 +54,6 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    align-items: space-between;
   }
   &__text {
     font-weight: bold;
@@ -64,6 +63,7 @@
   &__icon {
     color: grey;
     margin-left: 15px;
+    font-size: 1.3em;
   }
 
   &__number {
@@ -86,11 +86,21 @@
     border-radius: 20px;
     width: 100%;
     max-width: 350px;
+    margin-left: 15px;
     padding: 20px;
     box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.5);
     & > * {
       position: relative;
       left: -34px;
+    }
+    &:hover {
+      background-color: lighten($color-primary, 30%);
+      & > .tuto__icon {
+        color: $color-primary;
+      }
+    }
+    &:active {
+      transform: scale(0.95);
     }
   }
 }
@@ -165,12 +175,6 @@
 .footer {
   background-color: #353535ea;
   padding: 20px;
-  // &__container {
-  //   text-align: left;
-  //   width: 90%;
-  //   margin: auto;
-  //   max-width: 200px;
-  // }
 
   &__list {
     list-style: none;
@@ -191,9 +195,9 @@
     color: white;
     text-decoration: none;
 
-    // &:hover {
-    //   text-decoration: underline;
-    // }
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__icon {
